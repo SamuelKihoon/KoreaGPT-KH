@@ -1,0 +1,23 @@
+
+
+<textarea  rows="20" cols="50" id="my-textarea">여기에 입력하세요.</textarea>
+ 
+</br>
+<button id="replace-button">바꾸기!</button>
+<p id="result"></p>
+
+
+<script>
+    const replaceButton = document.getElementById("replace-button");
+replaceButton.addEventListener("click", replaceHello);
+
+function replaceHello() {
+  const textarea = document.getElementById("my-textarea");
+  const text = textarea.value;
+
+  const replacedText = text.replace(/습니다/g, "다").replace(/입니다/g, "이다");
+
+  document.getElementById("result").innerHTML = replacedText;
+}
+
+</script>
